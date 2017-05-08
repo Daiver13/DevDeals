@@ -1191,90 +1191,81 @@ a {
 *******************************/
 /* line 19, assets/sass/elements.scss */
 p {
-  font: 1em "Open Sans";
-  color: #1a1a1a;
   line-height: 1.5em; }
-  /* line 24, assets/sass/elements.scss */
+  /* line 22, assets/sass/elements.scss */
   p:last-child {
     margin-bottom: 0; }
-  /* line 28, assets/sass/elements.scss */
+  /* line 26, assets/sass/elements.scss */
   p a {
     text-decoration: underline; }
-    /* line 31, assets/sass/elements.scss */
+    /* line 29, assets/sass/elements.scss */
     p a:hover {
       text-decoration: none; }
 
 /* Image
 *******************************/
-/* line 40, assets/sass/elements.scss */
+/* line 38, assets/sass/elements.scss */
 img {
   max-width: 100%;
   height: auto; }
-  /* line 44, assets/sass/elements.scss */
+  /* line 42, assets/sass/elements.scss */
   img img {
     pointer-events: none; }
 
 /* Headers
 *******************************/
-/* line 51, assets/sass/elements.scss */
-h1 {
-  font: 3em "Georgia";
-  font-weight: bold;
-  color: #94002d;
-  margin-bottom: 1.2rem; }
-
 /* Placeholders
 *******************************/
-/* line 78, assets/sass/elements.scss */
+/* line 72, assets/sass/elements.scss */
 input[type="text"]::-webkit-input-placeholder,
 input[type="url"]::-webkit-input-placeholder,
 input[type="email"]::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
   color: inherit; }
 
-/* line 81, assets/sass/elements.scss */
+/* line 75, assets/sass/elements.scss */
 input[type="text"]:-moz-placeholder,
 input[type="url"]:-moz-placeholder,
 input[type="email"]:-moz-placeholder,
 textarea:-moz-placeholder {
   color: inherit; }
 
-/* line 84, assets/sass/elements.scss */
+/* line 78, assets/sass/elements.scss */
 input[type="text"]::-moz-placeholder,
 input[type="url"]::-moz-placeholder,
 input[type="email"]::-moz-placeholder,
 textarea::-moz-placeholder {
   color: inherit; }
 
-/* line 87, assets/sass/elements.scss */
+/* line 81, assets/sass/elements.scss */
 input[type="text"]:-ms-input-placeholder,
 input[type="url"]:-ms-input-placeholder,
 input[type="email"]:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
   color: inherit; }
 
-/* line 91, assets/sass/elements.scss */
+/* line 85, assets/sass/elements.scss */
 input[type="text"]:focus::-webkit-input-placeholder,
 input[type="url"]:focus::-webkit-input-placeholder,
 input[type="email"]:focus::-webkit-input-placeholder,
 textarea:focus::-webkit-input-placeholder {
   color: transparent; }
 
-/* line 94, assets/sass/elements.scss */
+/* line 88, assets/sass/elements.scss */
 input[type="text"]:focus:-moz-placeholder,
 input[type="url"]:focus:-moz-placeholder,
 input[type="email"]:focus:-moz-placeholder,
 textarea:focus:-moz-placeholder {
   color: transparent; }
 
-/* line 97, assets/sass/elements.scss */
+/* line 91, assets/sass/elements.scss */
 input[type="text"]:focus::-moz-placeholder,
 input[type="url"]:focus::-moz-placeholder,
 input[type="email"]:focus::-moz-placeholder,
 textarea:focus::-moz-placeholder {
   color: transparent; }
 
-/* line 100, assets/sass/elements.scss */
+/* line 94, assets/sass/elements.scss */
 input[type="text"]:focus:-ms-input-placeholder,
 input[type="url"]:focus:-ms-input-placeholder,
 input[type="email"]:focus:-ms-input-placeholder,
@@ -1283,7 +1274,7 @@ textarea:focus:-ms-input-placeholder {
 
 /* Vertical align
 *******************************/
-/* line 109, assets/sass/elements.scss */
+/* line 103, assets/sass/elements.scss */
 .in {
   display: -ms-flexbox;
   display: flex;
@@ -1292,42 +1283,368 @@ textarea:focus:-ms-input-placeholder {
   height: 100%;
   -ms-flex-pack: center;
   justify-content: center; }
-  /* line 124, assets/sass/elements.scss */
+  /* line 118, assets/sass/elements.scss */
   .in .in {
     display: block;
     height: auto;
     -ms-flex: 1;
         flex: 1; }
 
-/* line 130, assets/sass/elements.scss */
+/* line 124, assets/sass/elements.scss */
 .t-in {
   position: relative;
   width: 100%;
   height: 100%;
   display: table; }
-  /* line 136, assets/sass/elements.scss */
+  /* line 130, assets/sass/elements.scss */
   .t-in .t-in {
     display: table-cell;
     vertical-align: middle; }
 
 /* Mixins
 *******************************/
-/* line 146, assets/sass/elements.scss */
+/* line 140, assets/sass/elements.scss */
 .clear:after {
   display: block;
   clear: both;
   content: ""; }
 
-/* line 152, assets/sass/elements.scss */
+/* line 146, assets/sass/elements.scss */
 .cl {
   display: block;
   clear: both;
   content: ""; }
 
-/* line 157, assets/sass/elements.scss */
+/* line 151, assets/sass/elements.scss */
 .nofont {
   font: 0/0 serif;
   color: transparent; }
+
+/* Slider */
+/* line 3, assets/sass/plugins.scss */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent; }
+
+/* line 17, assets/sass/plugins.scss */
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0; }
+  /* line 24, assets/sass/plugins.scss */
+  .slick-list:focus {
+    outline: none; }
+  /* line 28, assets/sass/plugins.scss */
+  .slick-list.dragging {
+    cursor: pointer;
+    cursor: hand; }
+
+/* line 33, assets/sass/plugins.scss */
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  transform: translate3d(0, 0, 0); }
+
+/* line 42, assets/sass/plugins.scss */
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block; }
+  /* line 48, assets/sass/plugins.scss */
+  .slick-track:before, .slick-track:after {
+    content: "";
+    display: table; }
+  /* line 54, assets/sass/plugins.scss */
+  .slick-track:after {
+    clear: both; }
+  /* line 58, assets/sass/plugins.scss */
+  .slick-loading .slick-track {
+    visibility: hidden; }
+
+/* line 62, assets/sass/plugins.scss */
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none; }
+  /* line 66, assets/sass/plugins.scss */
+  [dir="rtl"] .slick-slide {
+    float: right; }
+  /* line 69, assets/sass/plugins.scss */
+  .slick-slide img {
+    display: block; }
+  /* line 72, assets/sass/plugins.scss */
+  .slick-slide.slick-loading img {
+    display: none; }
+  /* line 78, assets/sass/plugins.scss */
+  .slick-slide.dragging img {
+    pointer-events: none; }
+  /* line 82, assets/sass/plugins.scss */
+  .slick-initialized .slick-slide {
+    display: block; }
+  /* line 86, assets/sass/plugins.scss */
+  .slick-loading .slick-slide {
+    visibility: hidden; }
+  /* line 90, assets/sass/plugins.scss */
+  .slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent; }
+
+/* line 96, assets/sass/plugins.scss */
+.slick-arrow.slick-hidden {
+  display: none; }
+
+/* v1.0.6 */
+/* Core RS CSS file. 95% of time you shouldn't change anything here. */
+/* line 105, assets/sass/plugins.scss */
+.royalSlider {
+  width: 600px;
+  height: 400px;
+  position: relative;
+  direction: ltr; }
+
+/* line 111, assets/sass/plugins.scss */
+.royalSlider > * {
+  float: left; }
+
+/* line 115, assets/sass/plugins.scss */
+.rsFade.rsWebkit3d .rsSlide,
+.rsFade.rsWebkit3d img,
+.rsFade.rsWebkit3d .rsContainer {
+  -webkit-transform: none; }
+
+/* line 120, assets/sass/plugins.scss */
+.rsOverflow {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  float: left;
+  -webkit-tap-highlight-color: transparent; }
+
+/* line 128, assets/sass/plugins.scss */
+.rsVisibleNearbyWrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  -webkit-tap-highlight-color: transparent; }
+
+/* line 137, assets/sass/plugins.scss */
+.rsVisibleNearbyWrap .rsOverflow {
+  position: absolute;
+  left: 0;
+  top: 0; }
+
+/* line 143, assets/sass/plugins.scss */
+.rsContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-tap-highlight-color: transparent; }
+
+/* line 150, assets/sass/plugins.scss */
+.rsArrow,
+.rsThumbsArrow {
+  cursor: pointer; }
+
+/* line 155, assets/sass/plugins.scss */
+.rsThumb {
+  float: left;
+  position: relative; }
+
+/* line 161, assets/sass/plugins.scss */
+.rsArrow,
+.rsNav,
+.rsThumbsArrow {
+  opacity: 1;
+  transition: opacity 0.3s linear; }
+
+/* line 170, assets/sass/plugins.scss */
+.rsHidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0s linear 0.3s,opacity 0.3s linear; }
+
+/* line 180, assets/sass/plugins.scss */
+.rsGCaption {
+  width: 100%;
+  float: left;
+  text-align: center; }
+
+/* Fullscreen options, very important ^^ */
+/* line 187, assets/sass/plugins.scss */
+.royalSlider.rsFullscreen {
+  position: fixed !important;
+  height: auto !important;
+  width: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  z-index: 2147483647 !important;
+  top: 0 !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  right: 0 !important; }
+
+/* line 200, assets/sass/plugins.scss */
+.royalSlider .rsSlide.rsFakePreloader {
+  opacity: 1 !important;
+  transition: 0s;
+  display: none; }
+
+/* line 209, assets/sass/plugins.scss */
+.rsSlide {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  overflow: hidden;
+  height: 100%;
+  width: 100%; }
+
+/* line 220, assets/sass/plugins.scss */
+.royalSlider.rsAutoHeight,
+.rsAutoHeight .rsSlide {
+  height: auto; }
+
+/* line 225, assets/sass/plugins.scss */
+.rsContent {
+  width: 100%;
+  height: 100%;
+  position: relative; }
+
+/* line 231, assets/sass/plugins.scss */
+.rsPreloader {
+  position: absolute;
+  z-index: 0; }
+
+/* line 236, assets/sass/plugins.scss */
+.rsNav {
+  -moz-user-select: -moz-none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+      user-select: none; }
+
+/* line 241, assets/sass/plugins.scss */
+.rsNavItem {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.25); }
+
+/* line 245, assets/sass/plugins.scss */
+.rsThumbs {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  float: left;
+  z-index: 22; }
+
+/* line 252, assets/sass/plugins.scss */
+.rsTabs {
+  float: left;
+  background: none !important; }
+
+/* line 256, assets/sass/plugins.scss */
+.rsTabs,
+.rsThumbs {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent; }
+
+/* line 263, assets/sass/plugins.scss */
+.rsVideoContainer {
+  /*left: 0;
+  top: 0;
+  position: absolute;*/
+  /*width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  float: left;*/
+  width: auto;
+  height: auto;
+  line-height: 0;
+  position: relative; }
+
+/* line 278, assets/sass/plugins.scss */
+.rsVideoFrameHolder {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #141414;
+  opacity: 0;
+  -webkit-transition: .3s; }
+
+/* line 286, assets/sass/plugins.scss */
+.rsVideoFrameHolder.rsVideoActive {
+  opacity: 1; }
+
+/* line 289, assets/sass/plugins.scss */
+.rsVideoContainer iframe,
+.rsVideoContainer video,
+.rsVideoContainer embed,
+.rsVideoContainer .rsVideoObj {
+  position: absolute;
+  z-index: 50;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; }
+
+/* ios controls over video bug, shifting video */
+/* line 301, assets/sass/plugins.scss */
+.rsVideoContainer.rsIOSVideo iframe,
+.rsVideoContainer.rsIOSVideo video,
+.rsVideoContainer.rsIOSVideo embed {
+  box-sizing: border-box;
+  padding-right: 44px; }
+
+/* line 310, assets/sass/plugins.scss */
+.rsABlock {
+  left: 0;
+  top: 0;
+  position: absolute;
+  z-index: 15; }
+
+/* line 318, assets/sass/plugins.scss */
+img.rsImg {
+  max-width: none;
+  margin-top: 0 !important; }
+
+/* line 323, assets/sass/plugins.scss */
+.grab-cursor {
+  cursor: url(../img/grab.png) 8 8, move; }
+
+/* line 327, assets/sass/plugins.scss */
+.grabbing-cursor {
+  cursor: url(../img/grabbing.png) 8 8, move; }
+
+/* line 331, assets/sass/plugins.scss */
+.rsNoDrag {
+  cursor: auto; }
+
+/* line 335, assets/sass/plugins.scss */
+.rsLink {
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 20;
+  background: url(../img/blank.gif); }
 
 /* Main styles
 *******************************/
@@ -1346,174 +1663,15 @@ body {
 
 /* Header
 *******************************/
-/* line 18, assets/sass/main.scss */
-.head {
-  position: relative;
-  padding-top: 4.3rem;
-  margin-bottom: -0.2rem; }
-  /* line 23, assets/sass/main.scss */
-  .head img {
-    width: 100%;
-    height: auto; }
-  /* line 27, assets/sass/main.scss */
-  .head .main-nav {
-    position: absolute;
-    top: 6em;
-    left: 0;
-    right: 0;
-    margin: auto;
-    text-align: center; }
-    /* line 35, assets/sass/main.scss */
-    .head .main-nav li {
-      position: relative;
-      padding: 0 1.5rem;
-      display: inline-block;
-      text-transform: uppercase;
-      font: 18px "Georgia"; }
-      /* line 42, assets/sass/main.scss */
-      .head .main-nav li a {
-        transition: 500ms;
-        color: #1a1a1a; }
-        /* line 46, assets/sass/main.scss */
-        .head .main-nav li a:hover {
-          transition: 300ms;
-          color: #94002d; }
-    /* line 52, assets/sass/main.scss */
-    .head .main-nav .sub-menu {
-      position: absolute;
-      top: 2rem;
-      left: -3rem;
-      width: 200px; }
-      /* line 58, assets/sass/main.scss */
-      .head .main-nav .sub-menu li {
-        margin: 1em 1rem; }
-    /* line 62, assets/sass/main.scss */
-    .head .main-nav .current_page_item a {
-      color: #94002d; }
-
 /* Home
 *******************************/
-/* line 70, assets/sass/main.scss */
-.about-me {
-  position: relative;
-  display: -ms-flexbox;
-  display: flex;
-  padding-bottom: 4em;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  overflow: hidden; }
-  /* line 77, assets/sass/main.scss */
-  .about-me__left {
-    position: relative;
-    padding-left: 6%;
-    width: 50%; }
-  /* line 82, assets/sass/main.scss */
-  .about-me__right {
-    position: relative;
-    margin-top: 3.5em;
-    margin-left: -6%;
-    width: 40%; }
-  /* line 89, assets/sass/main.scss */
-  .about-me__content {
-    padding-left: 8em; }
-
-/* line 93, assets/sass/main.scss */
-.service {
-  position: relative;
-  overflow: hidden; }
-  /* line 96, assets/sass/main.scss */
-  .service img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: -1; }
-  /* line 103, assets/sass/main.scss */
-  .service__content {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around; }
-  /* line 107, assets/sass/main.scss */
-  .service__item {
-    position: relative;
-    width: 242px;
-    height: 242px;
-    margin-top: 200px;
-    margin-bottom: 4em;
-    text-align: center;
-    background: top center no-repeat;
-    background-color: rgba(208, 208, 208, 0.4);
-    border-radius: 50%; }
-    /* line 118, assets/sass/main.scss */
-    .service__item span {
-      position: absolute;
-      bottom: 45px;
-      left: 0;
-      right: 0;
-      margin: auto;
-      display: block;
-      padding: 0.4em 0;
-      background-color: #1a1a1a;
-      font: 1.2em "Georgia";
-      color: #fff;
-      font-weight: bold;
-      width: 230px; }
-  /* line 133, assets/sass/main.scss */
-  .service .service__dj {
-    background-image: url(../img/service__dj.svg);
-    background-size: 220px 160px; }
-  /* line 137, assets/sass/main.scss */
-  .service .service__leading {
-    background-image: url(../img/service__leading.svg); }
-
-/* Pages
-*******************************/
-/* line 144, assets/sass/main.scss */
-.reviews {
-  margin-top: 4em;
-  text-align: center; }
-
 /* Pages
 *******************************/
 /* Blog
 *******************************/
 /* Footer
 *******************************/
-/* line 157, assets/sass/main.scss */
-.footer {
-  text-align: center;
-  background: #000; }
-  /* line 160, assets/sass/main.scss */
-  .footer p {
-    padding: 0.4em 0;
-    font: 1em "Georgia";
-    color: #fff; }
-
 /* Contacts
 *******************************/
 /* Block styles
 *******************************/
-/* line 173, assets/sass/main.scss */
-.bg_s:after {
-  content: 'S';
-  position: absolute;
-  top: 0;
-  left: -10%;
-  font: 62rem "Georgia";
-  color: #94002d;
-  opacity: .3;
-  line-height: 39rem;
-  z-index: -1; }
-
-/* line 186, assets/sass/main.scss */
-.bg_p:before {
-  content: 'P';
-  position: absolute;
-  bottom: -2%;
-  left: 30%;
-  font: 62rem "Georgia";
-  color: #d4d4d4;
-  opacity: .33;
-  line-height: 45rem;
-  z-index: -1; }

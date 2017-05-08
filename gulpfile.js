@@ -35,7 +35,7 @@ var target = {
     js_dest       : 'assets/js/min',
     js_dest_name  : 'scripts.js',
     files_dest    : '**/*.php',
-    project_dir   : 'perkov.dev'
+    project_dir   : 'devdeals.dev'
 };
 
 /*******************************************************************************
