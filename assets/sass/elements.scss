@@ -1,0 +1,157 @@
+$mobile: 'only screen and (max-width: 768px)';
+$middle: 'only screen and (min-width: 320px) and (max-width: 850px)';
+
+/* Link styles
+*******************************/
+
+a {
+	color: inherit;
+	text-decoration:none;
+	transition: color 200ms;
+
+	img {
+		pointer-events: none;
+	}
+}
+
+/* Paragraphs
+*******************************/
+p {
+	font: 1em $font-osr;
+	color: $c-bla;
+	line-height: 1.5em;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	a {
+		text-decoration: underline;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+
+/* Image
+*******************************/
+img {
+	max-width: 100%;
+	height: auto;
+
+	img {
+		pointer-events: none;
+	}
+}
+
+/* Headers
+*******************************/
+h1 {
+
+}
+h2 {
+
+}
+h3 {
+
+}
+h4 {
+
+}
+h5 {
+
+}
+
+/* Placeholders
+*******************************/
+
+input[type="text"],
+input[type="url"],
+input[type="email"],
+textarea {
+	&::-webkit-input-placeholder {
+	    color: inherit;
+	}
+	&:-moz-placeholder {
+	    color: inherit;
+	}
+	&::-moz-placeholder {
+	    color: inherit;
+	}
+	&:-ms-input-placeholder {
+	    color: inherit;
+	}
+	&:focus {
+		&::-webkit-input-placeholder {
+		    color: transparent;
+		}
+		&:-moz-placeholder {
+		    color: transparent;
+		}
+		&::-moz-placeholder {
+		    color: transparent;
+		}
+		&:-ms-input-placeholder {
+		    color: transparent;
+		}
+	}
+}
+
+/* Vertical align
+*******************************/
+
+.in {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	height: 100%;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+
+	.in {
+		display: block;
+		height: auto;
+		flex: 1;
+	}
+}
+.t-in {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: table;
+
+	.t-in {
+		display: table-cell;
+		vertical-align: middle;
+	}
+}
+
+/* Mixins
+*******************************/
+
+.clear {
+  &:after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}
+.cl {
+	display: block;
+    clear: both;
+    content: "";
+}
+.nofont {
+  font: 0/0 serif;
+  color: transparent;
+}
+

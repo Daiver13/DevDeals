@@ -1,0 +1,27 @@
+/*
+Theme Name:         DevDeals
+Github Theme URI:   https://github.com/Daiver13/DevDeals
+Description:        It's a starter theme for WordPress
+Version:            1.0
+Author:             Oleg Lukashenko
+Author URI:         http://devdeals.com/
+
+*/
+
+/* ----------------------------------------------------------------------------
+
+  Unfortunately WordPress will require a style.css file
+  located in the theme's root folder for stuff to work.
+
+  However, we will not be using vanilla CSS. We're using Sass.
+
+  Sass is a superset of CSS that adds in amazing features
+  such as variables, nested selectors and loops. It's also
+  the easiest way to customize Foundation.
+
+  All Sass files are located in the /assets/scss folder.
+
+  If you for some reason would like to write plain css instead of using Sass,
+  you could just enqueue this file (style.css) to the header and add your styles in this file
+
+---------------------------------------------------------------------------- */
