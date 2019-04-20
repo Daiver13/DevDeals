@@ -35,7 +35,7 @@ var target = {
     js_dest       : 'assets/js/min',
     js_dest_name  : 'scripts.js',
     files_dest    : '**/*.php',
-    project_dir   : 'devdeals.dev'
+    project_dir   : 'localhost'
 };
 
 /*******************************************************************************
@@ -53,14 +53,7 @@ gulp.task('browserReload', function() {
 
 gulp.task('browser-sync', function() {
     return browserSync.init({
-        proxy: {
-            target: target.project_dir,
-            proxyRes: [
-                function (res) {
-                    res.headers["cache-control"] = "private";
-                }
-            ]
-        }
+        proxy: 'http://localhost:8888/remember/'
     });
 });
 
